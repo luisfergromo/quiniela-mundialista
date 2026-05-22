@@ -6,21 +6,25 @@ import './index.css';
 
 // 48 teams distributed in 4 pots with ISO codes
 const defaultTeams = [
+  // BOMBO 1
   { id: 1, name: "México", pot: 1, iso: "MX" }, { id: 2, name: "Estados Unidos", pot: 1, iso: "US" }, { id: 3, name: "Canadá", pot: 1, iso: "CA" }, { id: 4, name: "Argentina", pot: 1, iso: "AR" },
-  { id: 5, name: "Francia", pot: 1, iso: "FR" }, { id: 6, name: "Inglaterra", pot: 1, iso: "GB" }, { id: 7, name: "Bélgica", pot: 1, iso: "BE" }, { id: 8, name: "Brasil", pot: 1, iso: "BR" },
-  { id: 9, name: "Países Bajos", pot: 1, iso: "NL" }, { id: 10, name: "Portugal", pot: 1, iso: "PT" }, { id: 11, name: "España", pot: 1, iso: "ES" }, { id: 12, name: "Italia", pot: 1, iso: "IT" },
-  
-  { id: 13, name: "Croacia", pot: 2, iso: "HR" }, { id: 14, name: "Uruguay", pot: 2, iso: "UY" }, { id: 15, name: "Marruecos", pot: 2, iso: "MA" }, { id: 16, name: "Colombia", pot: 2, iso: "CO" },
-  { id: 17, name: "Senegal", pot: 2, iso: "SN" }, { id: 18, name: "Alemania", pot: 2, iso: "DE" }, { id: 19, name: "Japón", pot: 2, iso: "JP" }, { id: 20, name: "Suiza", pot: 2, iso: "CH" },
-  { id: 21, name: "Irán", pot: 2, iso: "IR" }, { id: 22, name: "Dinamarca", pot: 2, iso: "DK" }, { id: 23, name: "Corea del Sur", pot: 2, iso: "KR" }, { id: 24, name: "Austria", pot: 2, iso: "AT" },
-  
-  { id: 25, name: "Australia", pot: 3, iso: "AU" }, { id: 26, name: "Suecia", pot: 3, iso: "SE" }, { id: 27, name: "Hungría", pot: 3, iso: "HU" }, { id: 28, name: "Gales", pot: 3, iso: "GB" },
-  { id: 29, name: "Polonia", pot: 3, iso: "PL" }, { id: 30, name: "Ecuador", pot: 3, iso: "EC" }, { id: 31, name: "Serbia", pot: 3, iso: "RS" }, { id: 32, name: "Perú", pot: 3, iso: "PE" },
-  { id: 33, name: "Escocia", pot: 3, iso: "GB" }, { id: 34, name: "Turquía", pot: 3, iso: "TR" }, { id: 35, name: "Ucrania", pot: 3, iso: "UA" }, { id: 36, name: "Chile", pot: 3, iso: "CL" },
-  
-  { id: 37, name: "Panamá", pot: 4, iso: "PA" }, { id: 38, name: "Túnez", pot: 4, iso: "TN" }, { id: 39, name: "Argelia", pot: 4, iso: "DZ" }, { id: 40, name: "Egipto", pot: 4, iso: "EG" },
-  { id: 41, name: "Noruega", pot: 4, iso: "NO" }, { id: 42, name: "Camerún", pot: 4, iso: "CM" }, { id: 43, name: "Rumania", pot: 4, iso: "RO" }, { id: 44, name: "Costa Rica", pot: 4, iso: "CR" },
-  { id: 45, name: "Grecia", pot: 4, iso: "GR" }, { id: 46, name: "República Checa", pot: 4, iso: "CZ" }, { id: 47, name: "Arabia Saudita", pot: 4, iso: "SA" }, { id: 48, name: "Nueva Zelanda", pot: 4, iso: "NZ" }
+  { id: 5, name: "Brasil", pot: 1, iso: "BR" }, { id: 6, name: "Francia", pot: 1, iso: "FR" }, { id: 7, name: "España", pot: 1, iso: "ES" }, { id: 8, name: "Inglaterra", pot: 1, iso: "GB" },
+  { id: 9, name: "Portugal", pot: 1, iso: "PT" }, { id: 10, name: "Países Bajos", pot: 1, iso: "NL" }, { id: 11, name: "Bélgica", pot: 1, iso: "BE" }, { id: 12, name: "Alemania", pot: 1, iso: "DE" },
+
+  // BOMBO 2
+  { id: 13, name: "Croacia", pot: 2, iso: "HR" }, { id: 14, name: "Marruecos", pot: 2, iso: "MA" }, { id: 15, name: "Colombia", pot: 2, iso: "CO" }, { id: 16, name: "Uruguay", pot: 2, iso: "UY" },
+  { id: 17, name: "Suiza", pot: 2, iso: "CH" }, { id: 18, name: "Senegal", pot: 2, iso: "SN" }, { id: 19, name: "Japón", pot: 2, iso: "JP" }, { id: 20, name: "Irán", pot: 2, iso: "IR" },
+  { id: 21, name: "Corea del Sur", pot: 2, iso: "KR" }, { id: 22, name: "Ecuador", pot: 2, iso: "EC" }, { id: 23, name: "Austria", pot: 2, iso: "AT" }, { id: 24, name: "Australia", pot: 2, iso: "AU" },
+
+  // BOMBO 3
+  { id: 25, name: "Noruega", pot: 3, iso: "NO" }, { id: 26, name: "Panamá", pot: 3, iso: "PA" }, { id: 27, name: "Egipto", pot: 3, iso: "EG" }, { id: 28, name: "Argelia", pot: 3, iso: "DZ" },
+  { id: 29, name: "Escocia", pot: 3, iso: "GB" }, { id: 30, name: "Paraguay", pot: 3, iso: "PY" }, { id: 31, name: "Túnez", pot: 3, iso: "TN" }, { id: 32, name: "Costa de Marfil", pot: 3, iso: "CI" },
+  { id: 33, name: "Uzbekistán", pot: 3, iso: "UZ" }, { id: 34, name: "Catar", pot: 3, iso: "QA" }, { id: 35, name: "Arabia Saudita", pot: 3, iso: "SA" }, { id: 36, name: "Sudáfrica", pot: 3, iso: "ZA" },
+
+  // BOMBO 4
+  { id: 37, name: "Jordania", pot: 4, iso: "JO" }, { id: 38, name: "Cabo Verde", pot: 4, iso: "CV" }, { id: 39, name: "Ghana", pot: 4, iso: "GH" }, { id: 40, name: "Curazao", pot: 4, iso: "CW" },
+  { id: 41, name: "Haití", pot: 4, iso: "HT" }, { id: 42, name: "Nueva Zelanda", pot: 4, iso: "NZ" }, { id: 43, name: "Bosnia y Herzeg.", pot: 4, iso: "BA" }, { id: 44, name: "Suecia", pot: 4, iso: "SE" },
+  { id: 45, name: "Turquía", pot: 4, iso: "TR" }, { id: 46, name: "Rep. Checa", pot: 4, iso: "CZ" }, { id: 47, name: "Rep. del Congo", pot: 4, iso: "CD" }, { id: 48, name: "Irak", pot: 4, iso: "IQ" }
 ];
 
 const playBubbleSound = () => {
